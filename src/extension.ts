@@ -1,11 +1,16 @@
 import {StatusBarTerminal} from './statusBarTerminal';
 import * as vscode from 'vscode';
 
+const MAX_TERMINALS = 10;
 let _terminalCounter = 0;
 let _terminals: StatusBarTerminal[] = [];
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('extension.createTerminal', () => {
+        if (_terminals.length >= MAX_TERMINALS) {
+            vscode.window.showInformationMessage(`This extension does not support more than ${MAX_TERMINALS} terminals.`);
+            return;
+        }
         _terminals.push(new StatusBarTerminal(_terminalCounter++));
     }));
 
@@ -17,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
         });
     }));
 
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= MAX_TERMINALS; i++) {
         context.subscriptions.push(vscode.commands.registerCommand(`extension.showTerminal${i}`, (a) => {
             _terminals[i - 1].show();
         }));

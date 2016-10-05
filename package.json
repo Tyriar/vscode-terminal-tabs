@@ -31,13 +31,34 @@
             "title": "Create named terminal"
         }, {
             "command": "extension.showTerminal1",
-            "title": "Show terminal one"
+            "title": "Show terminal #1"
         }, {
             "command": "extension.showTerminal2",
-            "title": "Show terminal two"
+            "title": "Show terminal #2"
         }, {
             "command": "extension.showTerminal3",
-            "title": "Show terminal three"
+            "title": "Show terminal #3"
+        }, {
+            "command": "extension.showTerminal4",
+            "title": "Show terminal #4"
+        }, {
+            "command": "extension.showTerminal5",
+            "title": "Show terminal #5"
+        }, {
+            "command": "extension.showTerminal6",
+            "title": "Show terminal #6"
+        }, {
+            "command": "extension.showTerminal7",
+            "title": "Show terminal #7"
+        }, {
+            "command": "extension.showTerminal8",
+            "title": "Show terminal #8"
+        }, {
+            "command": "extension.showTerminal9",
+            "title": "Show terminal #9"
+        }, {
+            "command": "extension.showTerminal10",
+            "title": "Show terminal #10"
         }]
     },
     "scripts": {
