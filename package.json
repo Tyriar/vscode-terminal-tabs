@@ -1,0 +1,45 @@
+{
+    "name": "terminal-tabs",
+    "displayName": "Terminal Tabs",
+    "description": "Adds tabs for each terminal process to the status bar",
+    "version": "0.0.1",
+    "publisher": "Tyriar",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.createTerminal",
+        "onCommand:extension.createNamedTerminal"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.createTerminal",
+            "title": "Create terminal"
+        }, {
+            "command": "extension.createNamedTerminal",
+            "title": "Create named terminal"
+        }, {
+            "command": "extension.showTerminal1",
+            "title": "Show terminal one"
+        }, {
+            "command": "extension.showTerminal2",
+            "title": "Show terminal two"
+        }, {
+            "command": "extension.showTerminal3",
+            "title": "Show terminal three"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    }
+}
