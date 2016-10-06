@@ -4,6 +4,11 @@
 
 Adds tabs for each terminal process to the status bar.
 
+This extension provides the following commands:
+
+- `terminalTabs.createTerminal`: Creates a terminal with an icon
+- `terminalTabs.createNamedTerminal`: Creates a terminal with an icon that has a name (indicated in the dropdown)
+
 ![](images/preview.png)
 
 ## Limitations
