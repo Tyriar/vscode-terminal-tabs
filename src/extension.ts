@@ -6,7 +6,7 @@ let _terminalCounter = 0;
 let _terminals: StatusBarTerminal[] = [];
 
 export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(vscode.commands.registerCommand('extension.createTerminal', () => {
+    context.subscriptions.push(vscode.commands.registerCommand('terminalTabs.createTerminal', () => {
         if (_terminals.length >= MAX_TERMINALS) {
             vscode.window.showInformationMessage(`This extension does not support more than ${MAX_TERMINALS} terminals.`);
             return;
@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
         _terminals.push(new StatusBarTerminal(_terminalCounter++));
     }));
 
-    context.subscriptions.push(vscode.commands.registerCommand('extension.createNamedTerminal', () => {
+    context.subscriptions.push(vscode.commands.registerCommand('terminalTabs.createNamedTerminal', () => {
         vscode.window.showInputBox({
             placeHolder: 'Enter the name of the new terminal'
         }).then(name => {
@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
     }));
 
     for (let i = 1; i <= MAX_TERMINALS; i++) {
-        context.subscriptions.push(vscode.commands.registerCommand(`extension.showTerminal${i}`, (a) => {
+        context.subscriptions.push(vscode.commands.registerCommand(`terminalTabs.showTerminal${i}`, (a) => {
             _terminals[i - 1].show();
         }));
     }

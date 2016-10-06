@@ -19,46 +19,46 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.createTerminal",
-        "onCommand:extension.createNamedTerminal"
+        "onCommand:terminalTabs.createTerminal",
+        "onCommand:terminalTabs.createNamedTerminal"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.createTerminal",
+            "command": "terminalTabs.createTerminal",
             "title": "Create terminal"
         }, {
-            "command": "extension.createNamedTerminal",
+            "command": "terminalTabs.createNamedTerminal",
             "title": "Create named terminal"
         }, {
-            "command": "extension.showTerminal1",
+            "command": "terminalTabs.showTerminal1",
             "title": "Show terminal #1"
         }, {
-            "command": "extension.showTerminal2",
+            "command": "terminalTabs.showTerminal2",
             "title": "Show terminal #2"
         }, {
-            "command": "extension.showTerminal3",
+            "command": "terminalTabs.showTerminal3",
             "title": "Show terminal #3"
         }, {
-            "command": "extension.showTerminal4",
+            "command": "terminalTabs.showTerminal4",
             "title": "Show terminal #4"
         }, {
-            "command": "extension.showTerminal5",
+            "command": "terminalTabs.showTerminal5",
             "title": "Show terminal #5"
         }, {
-            "command": "extension.showTerminal6",
+            "command": "terminalTabs.showTerminal6",
             "title": "Show terminal #6"
         }, {
-            "command": "extension.showTerminal7",
+            "command": "terminalTabs.showTerminal7",
             "title": "Show terminal #7"
         }, {
-            "command": "extension.showTerminal8",
+            "command": "terminalTabs.showTerminal8",
             "title": "Show terminal #8"
         }, {
-            "command": "extension.showTerminal9",
+            "command": "terminalTabs.showTerminal9",
             "title": "Show terminal #9"
         }, {
-            "command": "extension.showTerminal10",
+            "command": "terminalTabs.showTerminal10",
             "title": "Show terminal #10"
         }]
     },

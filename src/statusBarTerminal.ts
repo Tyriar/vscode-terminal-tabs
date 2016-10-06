@@ -19,7 +19,7 @@ export class StatusBarTerminal {
 
     public setTerminalIndex(i: number) {
         this._item.text = `$(terminal)${i + 1}`;
-        this._item.command = `extension.showTerminal${i + 1}`;
+        this._item.command = `terminalTabs.showTerminal${i + 1}`;
     }
 
     public hasTerminal(terminal: vscode.Terminal) {
