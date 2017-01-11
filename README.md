@@ -4,12 +4,22 @@
 
 Adds tabs for each terminal process to the status bar.
 
-This extension provides the following commands:
+![Terminal tabs preview](images/preview.png)
+
+This extension provides the following commands that can be keybound in your [keybindings.json](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) file:
 
 - `terminalTabs.createTerminal`: Creates a terminal with an icon
 - `terminalTabs.createNamedTerminal`: Creates a terminal with an icon that has a name (indicated in the dropdown)
-
-![Terminal tabs preview](images/preview.png)
+- `terminalTabs.showTerminal1`: Shows the first terminal
+- `terminalTabs.showTerminal1`: Shows the second terminal
+- `terminalTabs.showTerminal1`: Shows the third terminal
+- `terminalTabs.showTerminal1`: Shows the fourth terminal
+- `terminalTabs.showTerminal1`: Shows the fifth terminal
+- `terminalTabs.showTerminal1`: Shows the sixth terminal
+- `terminalTabs.showTerminal1`: Shows the seventh terminal
+- `terminalTabs.showTerminal1`: Shows the eighth terminal
+- `terminalTabs.showTerminal1`: Shows the ninth terminal
+- `terminalTabs.showTerminal1`: Shows the tenth terminal
 
 ## Limitations
 
