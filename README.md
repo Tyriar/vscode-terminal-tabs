@@ -1,7 +1,5 @@
 # terminal-tabs
 
-**Warning: This is an early release that is not thoroughly tested.**
-
 Adds tabs for each terminal process to the status bar.
 
 ![Terminal tabs preview](images/preview.png)
