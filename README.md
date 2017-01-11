@@ -11,15 +11,15 @@ This extension provides the following commands that can be keybound in your [key
 - `terminalTabs.createTerminal`: Creates a terminal with an icon
 - `terminalTabs.createNamedTerminal`: Creates a terminal with an icon that has a name (indicated in the dropdown)
 - `terminalTabs.showTerminal1`: Shows the first terminal
-- `terminalTabs.showTerminal1`: Shows the second terminal
-- `terminalTabs.showTerminal1`: Shows the third terminal
-- `terminalTabs.showTerminal1`: Shows the fourth terminal
-- `terminalTabs.showTerminal1`: Shows the fifth terminal
-- `terminalTabs.showTerminal1`: Shows the sixth terminal
-- `terminalTabs.showTerminal1`: Shows the seventh terminal
-- `terminalTabs.showTerminal1`: Shows the eighth terminal
-- `terminalTabs.showTerminal1`: Shows the ninth terminal
-- `terminalTabs.showTerminal1`: Shows the tenth terminal
+- `terminalTabs.showTerminal2`: Shows the second terminal
+- `terminalTabs.showTerminal3`: Shows the third terminal
+- `terminalTabs.showTerminal4`: Shows the fourth terminal
+- `terminalTabs.showTerminal5`: Shows the fifth terminal
+- `terminalTabs.showTerminal6`: Shows the sixth terminal
+- `terminalTabs.showTerminal7`: Shows the seventh terminal
+- `terminalTabs.showTerminal8`: Shows the eighth terminal
+- `terminalTabs.showTerminal9`: Shows the ninth terminal
+- `terminalTabs.showTerminal10`: Shows the tenth terminal
 
 ## Limitations
 
