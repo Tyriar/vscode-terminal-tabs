@@ -2,7 +2,7 @@
     "name": "terminal-tabs",
     "displayName": "Terminal Tabs",
     "description": "Adds tabs for each terminal process to the status bar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "preview": true,
     "publisher": "Tyriar",
     "icon": "images/icon.png",
