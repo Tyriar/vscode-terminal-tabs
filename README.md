@@ -1,6 +1,6 @@
 # terminal-tabs
 
-Adds tabs for each terminal process to the status bar.
+Adds tabs for each terminal process to the status bar. It works by registering clickable status bar buttons when terminals are created via the commands below.
 
 ![Terminal tabs preview](images/preview.png)
 
