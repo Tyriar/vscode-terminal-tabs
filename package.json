@@ -5,6 +5,7 @@
     "version": "0.1.0",
     "preview": true,
     "publisher": "Tyriar",
+    "icon": "images/icon.png",
     "bugs": {
         "url": "https://github.com/Tyriar/vscode-terminal-tabs/issues"
     },
