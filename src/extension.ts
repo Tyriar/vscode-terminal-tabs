@@ -32,7 +32,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function onDidCloseTerminal(terminal: vscode.Terminal) {
-    console.log('Closed terminal', terminal);
     let terminalIndex: number;
     _terminals.forEach((statusBarTerminal, i) => {
         if (statusBarTerminal.hasTerminal(terminal)) {
