@@ -19,6 +19,8 @@ This extension provides the following commands that can be keybound in your [key
 - `terminalTabs.showTerminal9`: Shows the ninth terminal
 - `terminalTabs.showTerminal10`: Shows the tenth terminal
 
+__Note__: some common user-preferred shortcuts - eg, `Ctrl T` - are normally sent to terminal itself, rather than to the outside environment (where things like opening new terminal tabs are done). In order for that short cut to be used, open *File*, *Preferences*, and add `terminalTabs.createTerminal` to the `terminal.integrated.commandsToSkipShell` setting.
+
 ## Limitations
 
 - The terminals can only be tracked when they are created by the terminal API (See [Microsoft/vscode#13267](https://github.com/Microsoft/vscode/issues/13267)). It is currently not possible to intercept creation of the terminal panel on restart for example.
