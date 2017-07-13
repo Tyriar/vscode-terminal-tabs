@@ -42,7 +42,7 @@ function onDidCloseTerminal(terminal: vscode.Terminal) {
     // Push all terminals ahead of it back 1 index
     _terminals.splice(terminalIndex, 1);
     _terminals.forEach((statusBarTerminal, i) => {
-        _terminals[i].setTerminalIndex(i);
+        _terminals[i].setTerminalIndex(i, statusBarTerminal.name);
     });
     _terminalCounter--;
 }

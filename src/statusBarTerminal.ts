@@ -6,19 +6,23 @@ export class StatusBarTerminal {
 
     constructor(terminalIndex: number, name?: string) {
         this._item = vscode.window.createStatusBarItem();
-        this.setTerminalIndex(terminalIndex);
+        this.setTerminalIndex(terminalIndex, name);
         this._item.show();
 
         this._terminal = vscode.window.createTerminal(name);
         this._terminal.show();
     }
 
+    get name() {
+        return this._terminal.name;
+    }
+
     public show() {
         this._terminal.show();
     }
 
-    public setTerminalIndex(i: number) {
-        this._item.text = `$(terminal)${i + 1}`;
+    public setTerminalIndex(i: number, name?: string) {
+        this._item.text = `$(terminal) ${name ? name: (i + 1)}`;
         this._item.command = `terminalTabs.showTerminal${i + 1}`;
     }
 
