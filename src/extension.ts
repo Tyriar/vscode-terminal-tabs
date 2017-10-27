@@ -29,6 +29,7 @@ export function activate(context: ExtensionContext) {
     for (let i = 1; i <= MAX_TERMINALS; i++) {
         context.subscriptions.push(commands.registerCommand(`terminalTabs.showTerminal${i}`, (a) => {
             _terminals.forEach((terminal, index) => {
+                // Toggle or mark terminal as hidden
                 index === (i - 1) ? terminal.toggle() : terminal.markHidden();
             });
         }));
