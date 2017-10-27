@@ -18,9 +18,9 @@ export function activate(context: ExtensionContext) {
         window.showInputBox({
             placeHolder: 'Enter the name of the new terminal'
         }).then(name => {
-            for (let j = 0; j <_terminals.length; j++) {
-                _terminals[j].hide();
-            }
+            _terminals.forEach((terminal) => {
+                terminal.hide();
+            });
             
             _terminals.push(new StatusBarTerminal(_terminalCounter++, name));
         });
@@ -28,10 +28,9 @@ export function activate(context: ExtensionContext) {
 
     for (let i = 1; i <= MAX_TERMINALS; i++) {
         context.subscriptions.push(commands.registerCommand(`terminalTabs.showTerminal${i}`, (a) => {
-            for (let j = 0; j <_terminals.length; j++) {
-                // Toggle or hide terminal
-                j === (i - 1) ? _terminals[j].toggle() : _terminals[j].markHidden();
-            }
+            _terminals.forEach((terminal, index) => {
+                index === (i - 1) ? terminal.toggle() : terminal.markHidden();
+            });
         }));
     }
     
