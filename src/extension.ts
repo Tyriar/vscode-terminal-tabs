@@ -1,21 +1,21 @@
-import {StatusBarTerminal} from './statusBarTerminal';
-import * as vscode from 'vscode';
+import { StatusBarTerminal } from './statusBarTerminal';
+import { ExtensionContext, commands, window, Terminal } from 'vscode';
 
 const MAX_TERMINALS = 10;
 let _terminalCounter = 0;
 let _terminals: StatusBarTerminal[] = [];
 
-export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(vscode.commands.registerCommand('terminalTabs.createTerminal', () => {
+export function activate(context: ExtensionContext) {
+    context.subscriptions.push(commands.registerCommand('terminalTabs.createTerminal', () => {
         if (_terminals.length >= MAX_TERMINALS) {
-            vscode.window.showInformationMessage(`This extension does not support more than ${MAX_TERMINALS} terminals.`);
+            window.showInformationMessage(`This extension does not support more than ${MAX_TERMINALS} terminals.`);
             return;
         }
         _terminals.push(new StatusBarTerminal(_terminalCounter++));
     }));
 
-    context.subscriptions.push(vscode.commands.registerCommand('terminalTabs.createNamedTerminal', () => {
-        vscode.window.showInputBox({
+    context.subscriptions.push(commands.registerCommand('terminalTabs.createNamedTerminal', () => {
+        window.showInputBox({
             placeHolder: 'Enter the name of the new terminal'
         }).then(name => {
             for (let j = 0; j <_terminals.length; j++) {
@@ -27,18 +27,18 @@ export function activate(context: vscode.ExtensionContext) {
     }));
 
     for (let i = 1; i <= MAX_TERMINALS; i++) {
-        context.subscriptions.push(vscode.commands.registerCommand(`terminalTabs.showTerminal${i}`, (a) => {
+        context.subscriptions.push(commands.registerCommand(`terminalTabs.showTerminal${i}`, (a) => {
             for (let j = 0; j <_terminals.length; j++) {
                 // Toggle or hide terminal
-                j === (i - 1) ? _terminals[j].toggle() : _terminals[j].hide();
+                j === (i - 1) ? _terminals[j].toggle() : _terminals[j].markHidden();
             }
         }));
     }
     
-    context.subscriptions.push(vscode.window.onDidCloseTerminal(onDidCloseTerminal));
+    context.subscriptions.push(window.onDidCloseTerminal(onDidCloseTerminal));
 }
 
-function onDidCloseTerminal(terminal: vscode.Terminal) {
+function onDidCloseTerminal(terminal: Terminal) {
     _terminalCounter--;
     let terminalIndex: number, end: Boolean = false;
     _terminals.forEach((statusBarTerminal, i) => {

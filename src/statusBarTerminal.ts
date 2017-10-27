@@ -1,16 +1,18 @@
-import * as vscode from 'vscode';
+import { StatusBarItem, WorkspaceConfiguration, Terminal, window, workspace } from 'vscode';
 
 export class StatusBarTerminal {
-    private _item: vscode.StatusBarItem;
-    private _showing: Boolean = false;
-    public _terminal: vscode.Terminal;
+    private _config: WorkspaceConfiguration;
+    private _item: StatusBarItem;
+    private _showing: boolean = false;
+    public _terminal: Terminal;
 
     constructor(terminalIndex: number, name?: string) {
-        this._item = vscode.window.createStatusBarItem();
+        this._config = workspace.getConfiguration('terminalTabs');
+        this._item = window.createStatusBarItem();
         this.setTerminalIndex(terminalIndex, name);
         this._item.show();
 
-        this._terminal = vscode.window.createTerminal(name);
+        this._terminal = window.createTerminal(name);
         this.show();
     }
 
@@ -20,14 +22,18 @@ export class StatusBarTerminal {
 
     public show() {
         this._showing = true;
-        this._item.color = "yellow";
+        this._item.color = this._config.get('activeTabColor');
         this._terminal.show();
     }
 
     public hide() {
+        this.markHidden();
+        this._terminal.hide();
+    }
+
+    public markHidden() {
         this._showing = false;
         this._item.color = undefined;
-        this._terminal.hide();
     }
 
     public toggle() {
@@ -35,11 +41,11 @@ export class StatusBarTerminal {
     }
 
     public setTerminalIndex(i: number, name?: string) {
-        this._item.text = `$(terminal) ${name ? name: (i + 1)}`;
+        this._item.text = `$(terminal) ${name ? name : (i + 1)}`;
         this._item.command = `terminalTabs.showTerminal${i + 1}`; 
     }
 
-    public hasTerminal(terminal: vscode.Terminal) {
+    public hasTerminal(terminal: Terminal) {
         return this._terminal === terminal;
     }
 
