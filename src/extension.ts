@@ -1,11 +1,11 @@
 import * as vscode from 'vscode';
-import {StatusBarTerminal} from './statusBarTerminal';
+import { StatusBarTerminal } from './statusBarTerminal';
 
 const MAX_TERMINALS = 10;
 let _terminalCounter = 0;
 let _terminals: StatusBarTerminal[] = [];
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext): void {
     context.subscriptions.push(vscode.commands.registerCommand('terminalTabs.createTerminal', () => {
         if (_terminals.length >= MAX_TERMINALS) {
             vscode.window.showInformationMessage(`This extension does not support more than ${MAX_TERMINALS} terminals.`);
@@ -27,15 +27,15 @@ export function activate(context: vscode.ExtensionContext) {
             _terminals[i - 1].show();
         }));
     }
-    
+
     context.subscriptions.push(vscode.window.onDidCloseTerminal(onDidCloseTerminal));
 }
 
-function onDidCloseTerminal(terminal: vscode.Terminal) {
+function onDidCloseTerminal(terminal: vscode.Terminal): void {
     let terminalIndex: number;
     _terminals.forEach((statusBarTerminal, i) => {
         if (statusBarTerminal.hasTerminal(terminal)) {
-            terminalIndex = i; 
+            terminalIndex = i;
         }
     });
     _terminals[terminalIndex].dispose();
@@ -47,5 +47,5 @@ function onDidCloseTerminal(terminal: vscode.Terminal) {
     _terminalCounter--;
 }
 
-export function deactivate() {
+export function deactivate(): void {
 }

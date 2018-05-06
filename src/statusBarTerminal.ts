@@ -13,20 +13,20 @@ export class StatusBarTerminal {
         this._terminal.show();
     }
 
-    public show() {
+    public show(): void {
         this._terminal.show();
     }
 
-    public setTerminalIndex(i: number) {
+    public setTerminalIndex(i: number): void {
         this._item.text = `$(terminal)${i + 1}`;
         this._item.command = `terminalTabs.showTerminal${i + 1}`;
     }
 
-    public hasTerminal(terminal: vscode.Terminal) {
+    public hasTerminal(terminal: vscode.Terminal): boolean {
         return this._terminal === terminal;
     }
 
-    public dispose() {
+    public dispose(): void {
         this._item.dispose();
         this._terminal.dispose();
     }
