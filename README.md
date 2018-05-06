@@ -4,6 +4,8 @@ Adds tabs for each terminal process to the status bar. It works by registering c
 
 ![Terminal tabs preview](images/preview.png)
 
+If you want tabs to be built in to the core of VS Code, be sure to upvote [this issue](https://github.com/Microsoft/vscode/issues/10546).
+
 This extension provides the following commands that can be keybound in your [keybindings.json](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) file:
 
 - `terminalTabs.createTerminal`: Creates a terminal with an icon

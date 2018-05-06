@@ -25,43 +25,56 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "terminalTabs.createTerminal",
-            "title": "Create terminal"
-        }, {
-            "command": "terminalTabs.createNamedTerminal",
-            "title": "Create named terminal"
-        }, {
-            "command": "terminalTabs.showTerminal1",
-            "title": "Show terminal #1"
-        }, {
-            "command": "terminalTabs.showTerminal2",
-            "title": "Show terminal #2"
-        }, {
-            "command": "terminalTabs.showTerminal3",
-            "title": "Show terminal #3"
-        }, {
-            "command": "terminalTabs.showTerminal4",
-            "title": "Show terminal #4"
-        }, {
-            "command": "terminalTabs.showTerminal5",
-            "title": "Show terminal #5"
-        }, {
-            "command": "terminalTabs.showTerminal6",
-            "title": "Show terminal #6"
-        }, {
-            "command": "terminalTabs.showTerminal7",
-            "title": "Show terminal #7"
-        }, {
-            "command": "terminalTabs.showTerminal8",
-            "title": "Show terminal #8"
-        }, {
-            "command": "terminalTabs.showTerminal9",
-            "title": "Show terminal #9"
-        }, {
-            "command": "terminalTabs.showTerminal10",
-            "title": "Show terminal #10"
-        }]
+        "commands": [
+            {
+                "command": "terminalTabs.createTerminal",
+                "title": "Create terminal"
+            },
+            {
+                "command": "terminalTabs.createNamedTerminal",
+                "title": "Create named terminal"
+            },
+            {
+                "command": "terminalTabs.showTerminal1",
+                "title": "Show terminal #1"
+            },
+            {
+                "command": "terminalTabs.showTerminal2",
+                "title": "Show terminal #2"
+            },
+            {
+                "command": "terminalTabs.showTerminal3",
+                "title": "Show terminal #3"
+            },
+            {
+                "command": "terminalTabs.showTerminal4",
+                "title": "Show terminal #4"
+            },
+            {
+                "command": "terminalTabs.showTerminal5",
+                "title": "Show terminal #5"
+            },
+            {
+                "command": "terminalTabs.showTerminal6",
+                "title": "Show terminal #6"
+            },
+            {
+                "command": "terminalTabs.showTerminal7",
+                "title": "Show terminal #7"
+            },
+            {
+                "command": "terminalTabs.showTerminal8",
+                "title": "Show terminal #8"
+            },
+            {
+                "command": "terminalTabs.showTerminal9",
+                "title": "Show terminal #9"
+            },
+            {
+                "command": "terminalTabs.showTerminal10",
+                "title": "Show terminal #10"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
