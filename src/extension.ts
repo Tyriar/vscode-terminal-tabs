@@ -1,5 +1,5 @@
-import {StatusBarTerminal} from './statusBarTerminal';
 import * as vscode from 'vscode';
+import {StatusBarTerminal} from './statusBarTerminal';
 
 const MAX_TERMINALS = 10;
 let _terminalCounter = 0;
