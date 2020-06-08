@@ -19,11 +19,13 @@ This extension provides the following commands that can be keybound in your [key
 - `terminalTabs.showTerminal9`: Shows the ninth terminal
 - `terminalTabs.showTerminal10`: Shows the tenth terminal
 
-__Note__: some common user-preferred shortcuts - eg, `Ctrl T` - are normally sent to terminal itself, rather than to the outside environment (where things like opening new terminal tabs are done). In order for that short cut to be used, open *File*, *Preferences*, and add the following to your user settings (on the right):
+__Note__: some common user-preferred shortcuts - eg, <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>T</kbd> - are normally sent to terminal itself, rather than to the outside environment (where things like opening new terminal tabs are done). In order for that short cut to be used, open *File*, *Preferences*, and add the following to your user settings (on the right):
 
-    "terminal.integrated.commandsToSkipShell": [
-      "terminalTabs.createTerminal"
-    ]
+```json
+"terminal.integrated.commandsToSkipShell": [
+  "terminalTabs.createTerminal"
+]
+```
 
 ## Limitations
 
