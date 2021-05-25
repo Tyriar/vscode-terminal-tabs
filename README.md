@@ -1,5 +1,9 @@
 # terminal-tabs
 
+⚠️ This extension is deprecated because terminal tabs are now built into VS Code! Enable them using with the `terminal.integrated.tabs.enabled` setting.
+
+---
+
 Adds tabs for each terminal process to the status bar. It works by registering clickable status bar buttons when terminals are created via the commands below.
 
 ![Terminal tabs preview](images/preview.png)

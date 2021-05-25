@@ -1,6 +1,6 @@
 {
     "name": "terminal-tabs",
-    "displayName": "Terminal Tabs",
+    "displayName": "Terminal Tabs (deprecated)",
     "description": "Adds tabs for each terminal process to the status bar",
     "version": "0.2.0",
     "preview": true,
